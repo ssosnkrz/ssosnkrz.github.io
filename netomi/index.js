@@ -47,7 +47,7 @@ function hideCalloutBubble() {
   // To hide the callout bubbles
   window.NETOMI_WEB_WIDGET.showCalloutBubble(false);
 }
-function showCalloutBubble() {
+async function showCalloutBubble() {
   console.log("showCalloutBubble");
   // To dynamically send a different callout bubble. It also overrides the existing callout bubbles in the bot's json.
   const obj = {
@@ -84,7 +84,7 @@ function showCalloutBubble() {
       },
     ],
     config: {
-      displayTimer: 1000000,
+      displayTimer: 10000,
       maxWidthForMobile: "50%",
       exposedFnWidthRange: [0, 9999],
     },
