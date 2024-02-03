@@ -29,7 +29,7 @@ ns.onload = function () {
 };
 function changeLocale() {
   // To change the language of the bot, pass a language code in the changeLocale method.
-  const language = "fr";
+  const language = "pl";
   Netomi.chat.changeLocale(language);
 }
 function openWidget() {
@@ -40,38 +40,38 @@ function closeWidget() {
   // To close the chat widget
   Netomi.chat.closeWidget();
 }
-function showCalloutBubble() {
+function hideCalloutBubble() {
   // To hide the callout bubbles
   Netomi.chat.showCalloutBubble(false);
 }
 function showDifferentCalloutBubble() {
   // To dynamically send a different callout bubble. It also overrides the existing callout bubbles in the bot's json.
   const obj = {
-    url: "https://formnetomi.000webhostapp.com/testbotaakash.html",
     calloutBubbleEnabled: true,
+    intent: "callout bubbles",
     delayForFirstBubble: 1000,
     delayInBetweenBubbles: 1000,
     attachments: [
       {
         type: "Text",
-        text: "Hi!!",
+        text: "hi",
       },
       {
         type: "Text",
-        text: "This is netomi bot.",
+        text: "My name is Katie",
       },
       {
         type: "Text",
-        text: "This is netomi bot123",
+        text: "How can i help you today?",
         quickReply: {
           options: [
             {
-              label: "form response",
-              metadata: "video response",
+              label: "Go to main menu",
+              metadata: "menu",
               contentType: "text",
             },
             {
-              label: "form response",
+              label: "Connect with agent",
               metadata: "agent",
               contentType: "text",
             },
@@ -82,7 +82,7 @@ function showDifferentCalloutBubble() {
     config: {
       displayTimer: 10000,
       maxWidthForMobile: "50%",
-      __exposedFnWidthRange: [0, 999999],
+      exposedFnWidthRange: [0, 9999],
     },
   };
   Netomi.chat.showCalloutBubble(obj);
