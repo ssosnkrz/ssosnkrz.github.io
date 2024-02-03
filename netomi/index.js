@@ -84,7 +84,7 @@ function showCalloutBubble() {
       },
     ],
     config: {
-      displayTimer: 10000,
+      displayTimer: 1000000,
       maxWidthForMobile: "50%",
       exposedFnWidthRange: [0, 9999],
     },
