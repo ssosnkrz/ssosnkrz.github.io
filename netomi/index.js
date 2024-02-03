@@ -8,29 +8,10 @@ ns.setAttribute("widgetId", "12234r82-2838723-12833");
 var s = document.getElementsByTagName("script")[0];
 s.parentNode.insertBefore(ns, s);
 ns.onload = function () {
-  function onLoad() {
-    Netomi.chat.onLoad(() => {
-      // This method is helpful to run any other PubSub event upon MQTT connection establishment.
-      document.querySelector(".onLoad").innerText =
-        "onLoad - This method runs when a successful MQTT connection is established.";
-      console.log(
-        "This method runs when a successful MQTT connection is established."
-      );
-
-      showCalloutBubble();
-      sendVisitorInfo();
-    });
-  }
-  function init() {
-    Netomi.chat.init(() => {
-      // This method is helpful to run any other PubSub event upon bot has initialised with bot's json.
-      document.querySelector(".init").innerText =
-        "init - This method runs when bot has initialised with bot's json.";
-      console.log("This method runs when bot has initialised with bot's json.");
-    });
-  }
-  init();
-  onLoad();
+  window.NETOMI_WEB_WIDGET.init(() => {
+    showCalloutBubble();
+    sendVisitorInfo();
+  });
 };
 function changeLocale() {
   // To change the language of the bot, pass a language code in the changeLocale method.
