@@ -41,10 +41,12 @@ function closeWidget() {
   Netomi.chat.closeWidget();
 }
 function hideCalloutBubble() {
+  console.log("hideCalloutBubble");
   // To hide the callout bubbles
   Netomi.chat.showCalloutBubble(false);
 }
 function showDifferentCalloutBubble() {
+  console.log("showDifferentCalloutBubble");
   // To dynamically send a different callout bubble. It also overrides the existing callout bubbles in the bot's json.
   const obj = {
     calloutBubbleEnabled: true,
@@ -113,5 +115,7 @@ function endSession() {
 }
 function sendVisitorInfo() {
   // To send visitor info as custom attributes in webhook-message API.
-  Netomi.chat.publish("VISITOR_INFO", { name: "John", org: "Netomi" });
+  const obj = { name: "John", org: "Netomi" };
+  console.log("VISITOR_INFO", obj);
+  Netomi.chat.publish("VISITOR_INFO", obj);
 }
