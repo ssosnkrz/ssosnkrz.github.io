@@ -1,8 +1,8 @@
 var ns = document.createElement("script");
-ns.src = "https://chatapps-qa.netomi.com/app/script.js";
+ns.src = "https://chatapps-us.netomi.com/app/script.js";
 ns.type = "text/javascript";
 ns.async = true;
-ns.setAttribute("botRefId", "355a0d8e");
+ns.setAttribute("botRefId", "b8a1823c-5130-4459-89ac-383b8e27845a");
 var s = document.getElementsByTagName("script")[0];
 s.parentNode.insertBefore(ns, s);
 ns.onload = function () {
