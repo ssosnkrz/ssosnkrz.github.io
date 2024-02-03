@@ -15,7 +15,7 @@ ns.onload = function () {
 };
 function changeLocale() {
   // To change the language of the bot, pass a language code in the changeLocale method.
-  const language = "pl";
+  const language = "en";
   Netomi.chat.changeLocale(language);
 }
 function openWidget() {
