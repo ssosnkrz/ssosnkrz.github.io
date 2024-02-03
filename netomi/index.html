@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCW IN BUILT METHODS</title>
+    <style>
+      body {
+        width: 80%;
+      }
+      .ncw-methods-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+      }
+      button {
+        padding: 10px;
+        cursor: pointer;
+        background-color: blueviolet;
+        color: white;
+      }
+      button:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ncw-methods-container">
+      <button class="onLoad" disabled>onLoad</button>
+      <button class="init" disabled>init</button>
+      <button class="changeLocale" onclick="changeLocale()">
+        changeLocale: To change the language of the bot, pass a language code in
+        changeLocale method
+      </button>
+      <button class="openWidget" onclick="openWidget()">
+        openWidget: To open the chat widget
+      </button>
+      <button class="closeWidget" onclick="closeWidget()">
+        closeWidget: To close the chat widget
+      </button>
+      <button class="showCalloutBubble" onclick="showCalloutBubble()">
+        showCalloutBubble: To hide the callout bubbles
+      </button>
+      <button class="showCalloutBubble" onclick="showDifferentCalloutBubble()">
+        show different callout bubble
+      </button>
+      <button class="showWidget" onclick="showWidget()">
+        showWidget: To show the widget
+      </button>
+      <button class="hideWidget" onclick="hideWidget()">
+        hideWidget: To hide the widget
+      </button>
+      <button class="OpenInFullScreen" onclick="OpenInFullScreen()">
+        OpenInFullScreen: To open the widget in full available width of the
+        screena
+      </button>
+      <button class="OpenInStandardScreen" onclick="OpenInStandardScreen()">
+        OpenInStandardScreen: To open the widget with default height and width.
+      </button>
+      <button class="sendMessageInCW" onclick="sendMessageInCW()">
+        SendMessageInWidget: To send message in widget without typing in the
+        footer.
+      </button>
+      <button class="endSession" onclick="endSession()">
+        endSession: To end the current ongoing session.
+      </button>
+      <button class="sendVisitorInfo" onclick="sendVisitorInfo()">
+        sendVisitorInfo: To send visitor info as custom attributes in
+        webhook-message API. Check network call to verify
+      </button>
+    </div>
+  </body>
+  <script defer src="./index.js"></script>
+</html>
