@@ -9,6 +9,7 @@ var s = document.getElementsByTagName("script")[0];
 s.parentNode.insertBefore(ns, s);
 ns.onload = function () {
   window.NETOMI_WEB_WIDGET.init(() => {
+    endSession();
     showCalloutBubble();
     sendVisitorInfo();
   });
