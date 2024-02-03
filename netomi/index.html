@@ -32,6 +32,10 @@
     <div class="ncw-methods-container">
       <button class="onLoad" disabled>onLoad</button>
       <button class="init" disabled>init</button>
+      <button class="sendMessageInCW" onclick="sendMessageInCW()">
+        SendMessageInWidget: To send message in widget without typing in the
+        footer.
+      </button>
       <button class="changeLocale" onclick="changeLocale()">
         changeLocale: To change the language of the bot, pass a language code in
         changeLocale method
@@ -45,7 +49,7 @@
       <button class="showCalloutBubble" onclick="hideCalloutBubble()">
         hideCalloutBubble: To hide the callout bubbles
       </button>
-      <button class="showCalloutBubble" onclick="showDifferentCalloutBubble()">
+      <button class="showCalloutBubble" onclick="showCalloutBubble()">
         show different callout bubble
       </button>
       <button class="showWidget" onclick="showWidget()">
@@ -60,10 +64,6 @@
       </button>
       <button class="OpenInStandardScreen" onclick="OpenInStandardScreen()">
         OpenInStandardScreen: To open the widget with default height and width.
-      </button>
-      <button class="sendMessageInCW" onclick="sendMessageInCW()">
-        SendMessageInWidget: To send message in widget without typing in the
-        footer.
       </button>
       <button class="endSession" onclick="endSession()">
         endSession: To end the current ongoing session.

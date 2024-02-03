@@ -3,6 +3,8 @@ ns.src = "https://chatapps-us.netomi.com/app/script.js";
 ns.type = "text/javascript";
 ns.async = true;
 ns.setAttribute("botRefId", "b8a1823c-5130-4459-89ac-383b8e27845a");
+ns.setAttribute("debug", "true");
+ns.setAttribute("widgetId", "12234r82-2838723-12833");
 var s = document.getElementsByTagName("script")[0];
 s.parentNode.insertBefore(ns, s);
 ns.onload = function () {
@@ -43,10 +45,10 @@ function closeWidget() {
 function hideCalloutBubble() {
   console.log("hideCalloutBubble");
   // To hide the callout bubbles
-  Netomi.chat.showCalloutBubble(false);
+  window.NETOMI_WEB_WIDGET.showCalloutBubble(false);
 }
-function showDifferentCalloutBubble() {
-  console.log("showDifferentCalloutBubble");
+function showCalloutBubble() {
+  console.log("showCalloutBubble");
   // To dynamically send a different callout bubble. It also overrides the existing callout bubbles in the bot's json.
   const obj = {
     calloutBubbleEnabled: true,
