@@ -10,7 +10,6 @@ s.parentNode.insertBefore(ns, s);
 ns.onload = function () {
   window.NETOMI_WEB_WIDGET.init(() => {
     endSession();
-    showCalloutBubble();
     sendVisitorInfo();
   });
 };
@@ -106,3 +105,5 @@ function sendVisitorInfo() {
   console.log("VISITOR_INFO", obj);
   Netomi.chat.publish("VISITOR_INFO", obj);
 }
+
+window.onload(() => showCalloutBubble());
