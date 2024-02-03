@@ -16,6 +16,9 @@ ns.onload = function () {
       console.log(
         "This method runs when a successful MQTT connection is established."
       );
+
+      showCalloutBubble();
+      sendVisitorInfo();
     });
   }
   function init() {
