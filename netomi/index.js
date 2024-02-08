@@ -105,5 +105,3 @@ function sendVisitorInfo() {
   console.log("VISITOR_INFO", obj);
   Netomi.chat.publish("VISITOR_INFO", obj);
 }
-
-window.onload(() => showCalloutBubble());
